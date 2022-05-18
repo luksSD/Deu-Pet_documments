@@ -1,3 +1,19 @@
 ﻿<user-preferences>
-  <open-windows />
+  <open-windows>
+    <window type="Diagram" resource="pe702b865142c495ab38f20fb994814d1_531676236" />
+    <window type="Diagram" resource="p5c88dc877b284afeb18b2602be32af7c_780701566" />
+    <window type="Diagram" resource="p5e6508eedc6a4c3c940cfb23c093214b_502842026" />
+    <window type="Diagram" resource="p8c11915dad8c405e82f35e58676adbcb_680972339" />
+    <window type="Diagram" resource="pd61e6dd3ea6d4db4a860194b074c4d87_302708498" />
+    <window type="Diagram" resource="pcb670495aa844a53b75ffb7ede31a9e9_766969153" />
+    <window type="Diagram" resource="p7cfd469259f74ea18500d41bae9f435c_487515087" />
+    <window type="Diagram" resource="p23e61c7f6fc34c57b7979f4810fb7d3e_575154736" />
+    <window type="Diagram" resource="pfa93467259ac4e978df28a25200951b2_408634036" />
+    <window type="Diagram" resource="p3e4be083597a4d7dba942b360c4c8c8c_672917939" />
+    <window type="Diagram" resource="p96fc079e31734a3bbcdaf75204d99328_123979114" />
+    <window type="Diagram" resource="pf7a6f2500d6848839c5ff060be37c924_235290349" />
+    <window type="Diagram" resource="p72e0a9b9f9f949fcb7df5b2f2ec298be_306612438" />
+    <window type="Diagram" resource="p11f9b017026b438b95c95e39b07e7a47_993881391" />
+    <window type="Diagram" resource="p27133900d7c245739dfa7dca23b2faf7_392260482" />
+  </open-windows>
 </user-preferences>
