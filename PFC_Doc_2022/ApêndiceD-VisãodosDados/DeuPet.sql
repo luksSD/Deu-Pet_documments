@@ -99,6 +99,7 @@ ALTER TABLE arquivo_animal ADD CONSTRAINT fk1_arquivo_animal foreign key (animal
 --Criando pessoa_interessa_animal
 CREATE TABLE pessoa_interessa_animal
 (
+    id BIGSERIAL primary key,
 	pessoa_id INTEGER not null,
 	animal_id INTEGER not null,
     data DATE not null
@@ -145,6 +146,7 @@ ALTER TABLE arquivo_campanha ADD CONSTRAINT fk1_arquivo_campanha foreign key (ca
 --Criando pessoa_cadastra_campanha
 CREATE TABLE pessoa_cadastra_campanha
 (
+    id BIGSERIAL primary key,
 	pessoa_id INTEGER not null,
 	campanha_id INTEGER not null,
 	situacao VARCHAR (50) not null,
