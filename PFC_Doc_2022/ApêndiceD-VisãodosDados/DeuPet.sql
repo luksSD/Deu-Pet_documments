@@ -1,7 +1,7 @@
-DROP DATABASE IF exists deupet;
+--DROP DATABASE IF exists deupet;
 
-CREATE DATABASE deupet WITH OWNER = postgres
-ENCODING = 'UTF8' CONNECTION LIMIT = -1;
+--CREATE DATABASE deupet WITH OWNER = postgres
+--ENCODING = 'UTF8' CONNECTION LIMIT = -1;
 
 --Criando tabela usuario
 CREATE TABLE usuario
@@ -81,7 +81,7 @@ CREATE TABLE animal
 );
 
 --Tornando instituicao_id uma FK da tabela animal
-ALTER TABLE animal ADD CONSTRAINT fk1_animal foreign key (instituicao_id) references instituicao(id) on update cascade on delete cascade;
+ALTER TABLE animal ADD CONSTRAINT fk1_animal foreign key (instituicao_id) references instituicao(usuario_id) on update cascade on delete cascade;
 
 --Criando tabela arquivo_animal
 CREATE TABLE arquivo_animal
@@ -106,7 +106,7 @@ CREATE TABLE pessoa_interessa_animal
 );
 
 --Tornando pessoa_id/animal_id uma FK da tabela pessoa_interessa_animal
-ALTER TABLE pessoa_interessa_animal ADD CONSTRAINT fk1_pessoa_interessa_animal foreign key (pessoa_id) references pessoa(id) on update cascade on delete cascade;
+ALTER TABLE pessoa_interessa_animal ADD CONSTRAINT fk1_pessoa_interessa_animal foreign key (pessoa_id) references pessoa(usuario_id) on update cascade on delete cascade;
 ALTER TABLE pessoa_interessa_animal ADD CONSTRAINT fk2_pessoa_interessa_animal foreign key (animal_id) references animal(id) on update cascade on delete cascade;
 
 --Colocando UK entre pessoa_id e animal_id na tabela pessoa_interessa_animal
@@ -127,7 +127,7 @@ CREATE TABLE campanha
 );
 
 --Tornando instituicao_id uma FK da tabela campanha
-ALTER TABLE campanha ADD CONSTRAINT fk1_campanha foreign key (instituicao_id) references instituicao(id) on update cascade on delete cascade;
+ALTER TABLE campanha ADD CONSTRAINT fk1_campanha foreign key (instituicao_id) references instituicao(usuario_id) on update cascade on delete cascade;
 --ALTER TABLE campanha ADD CONSTRAINT fk2_campanha foreign key (formulario_id) references formulario(id) on update cascade on delete cascade;
 
 --Criando tabela arquivo_campanha
@@ -153,7 +153,7 @@ CREATE TABLE pessoa_cadastra_campanha
 );
 
 --Tornando pessoa_id/campanha_id uma FK da tabela pessoa_cadastra_campanha
-ALTER TABLE pessoa_cadastra_campanha ADD CONSTRAINT fk1_pessoa_cadastra_campanha foreign key (pessoa_id) references pessoa(id) on update cascade on delete cascade;
+ALTER TABLE pessoa_cadastra_campanha ADD CONSTRAINT fk1_pessoa_cadastra_campanha foreign key (pessoa_id) references pessoa(usuario_id) on update cascade on delete cascade;
 ALTER TABLE pessoa_cadastra_campanha ADD CONSTRAINT fk2_pessoa_cadastra_campanha foreign key (campanha_id) references campanha(id) on update cascade on delete cascade;
 
 --Colocando UK entre pessoa_id e campanha_id na tabela pessoa_cadastra_campanha
