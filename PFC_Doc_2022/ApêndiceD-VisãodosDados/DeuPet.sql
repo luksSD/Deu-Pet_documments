@@ -123,13 +123,12 @@ CREATE TABLE campanha
     data_inicio DATE not null,
     data_fim DATE not null,
 	instituicao_id integer not null
-	--formulario_id integer not null
+	formulario_id integer not null
 
 );
 
 --Tornando instituicao_id uma FK da tabela campanha
 ALTER TABLE campanha ADD CONSTRAINT fk1_campanha foreign key (instituicao_id) references instituicao(usuario_id) on update cascade on delete cascade;
---ALTER TABLE campanha ADD CONSTRAINT fk2_campanha foreign key (formulario_id) references formulario(id) on update cascade on delete cascade;
 
 --Criando tabela arquivo_campanha
 CREATE TABLE arquivo_campanha
@@ -175,7 +174,8 @@ CREATE TABLE formulario
 alter table formulario add constraint fk1_formulario foreign key (campanha_id) references campanha(id) on update cascade on delete cascade;
 
 
-
+--Tornando formulario_id uma FK da tabela campanha
+ALTER TABLE campanha ADD CONSTRAINT fk2_campanha foreign key (formulario_id) references formulario(id) on update cascade on delete cascade;
 
 
 
