@@ -1,10 +1,10 @@
 pessoa_interessa_animal
 pessoa_cadastra_campanha
-formulario
 arquivo_campanha
 arquivo_animal
 pessoa
 animal
+formulario
 campanha
 instituicao
 usuario
