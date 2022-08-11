@@ -1,0 +1,6 @@
+Colocar nesta pasta do Apêndice J:
+
+Fase 3: preencher o arquivo com as descrições dos casos de testes e resultado dos testes após a realizaçã deles.
+
+Fase 4: atualizar.
+
