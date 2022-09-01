@@ -32,7 +32,6 @@ ALTER TABLE municipio ADD CONSTRAINT uk1_municipio unique(uf, nome);
 CREATE TABLE pessoa
 (
     usuario_id INTEGER primary key,
-    telefone VARCHAR (20) unique not null,
     logradouro VARCHAR (100) not null,
     numero VARCHAR (10) not null,
     cep VARCHAR (10),
@@ -47,7 +46,6 @@ ALTER TABLE pessoa ADD CONSTRAINT fk2_pessoa foreign key (usuario_id) references
 CREATE TABLE instituicao
 (
     usuario_id INTEGER primary key,
-    telefone VARCHAR (20) unique not null,
     cnpj VARCHAR (21) DEFAULT 00000000000000 not null,
     logradouro VARCHAR (100) not null,
     numero VARCHAR (10) not null,
@@ -80,6 +78,7 @@ CREATE TABLE animal
 
 );
 
+
 --Tornando instituicao_id uma FK da tabela animal
 ALTER TABLE animal ADD CONSTRAINT fk1_animal foreign key (instituicao_id) references instituicao(usuario_id) on update cascade on delete cascade;
 
@@ -91,6 +90,7 @@ CREATE TABLE arquivo_animal
     fotos VARCHAR not null
     
 );
+
 
 --Tornando animal_id uma FK da tabela arquivo_animal
 ALTER TABLE arquivo_animal ADD CONSTRAINT fk1_arquivo_animal foreign key (animal_id) references animal(id) on update cascade on delete cascade;
@@ -105,6 +105,7 @@ CREATE TABLE pessoa_interessa_animal
     data DATE not null
     
 );
+
 
 --Tornando pessoa_id/animal_id uma FK da tabela pessoa_interessa_animal
 ALTER TABLE pessoa_interessa_animal ADD CONSTRAINT fk1_pessoa_interessa_animal foreign key (pessoa_id) references pessoa(usuario_id) on update cascade on delete cascade;
@@ -139,6 +140,7 @@ CREATE TABLE arquivo_campanha
     
 );
 
+
 --Tornando campanha_id uma FK da tabela arquivo_campanha
 ALTER TABLE arquivo_campanha ADD CONSTRAINT fk1_arquivo_campanha foreign key (campanha_id) references campanha(id) on update cascade on delete cascade;
 
@@ -170,6 +172,7 @@ CREATE TABLE formulario
     
 );
 
+
 --Tornando campanha_id uma FK da tabela formulario
 alter table formulario add constraint fk1_formulario foreign key (campanha_id) references campanha(id) on update cascade on delete cascade;
 
@@ -181,7 +184,7 @@ ALTER TABLE campanha ADD CONSTRAINT fk2_campanha foreign key (formulario_id) ref
 --Adicionando cidades que o projeto vai atender inicialmente
 -----------------------------------------------------------
 INSERT INTO municipio (id , uf, nome) 
-values ('1' , 'Minas Gerais' , 'Santa Rita do Sapucai');
+values ('1' , 'Minas Gerais' , 'Pouso Alegre');
 
 
 
