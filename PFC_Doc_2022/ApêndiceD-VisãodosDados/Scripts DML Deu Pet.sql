@@ -19,13 +19,13 @@ values ('3' , 'Matheus Souza' , '123', 'matheus@gmail.com','999','true','01/09/2
 --Adicionando usuarios do tipo instituicao 
 -----------------------------------------------------------
 INSERT INTO usuario (id , nome, senha,email,celular,situacao,data,aceite,tipo) 
-values ('4' , 'Sociedade Protetora dos Animais' , '123', 'spa@gmail.com','99999','true','01/09/2022','true','instituicao');
+values ('4' , 'Sociedade Protetora dos Animais' , '123', 'spa@gmail.com','123','true','01/09/2022','true','instituicao');
 
 
 --Adicionando cidades que o projeto vai atender inicialmente
 -----------------------------------------------------------
 INSERT INTO municipio (id , uf, nome) 
-values ('1' , 'Minas Gerais' , 'Santa Rita do Sapucai');
+values ('2' , 'Minas Gerais' , 'Santa Rita do Sapucai');
 
 
 --Adicionando pessoas
@@ -57,11 +57,6 @@ values ('1' , 'cachorro', 'masculino', '5','médio','Sem raça','true','Calmo', 
 INSERT INTO campanha (id , titulo,descricao,requisitos,data_inicio,data_fim,instituicao_id,formulario_id)
 values ('1' , 'Vacinação', 'Vacinação de cachorros e gatos', 'Sem requisitos','01/09/2022','01/09/2023','4','1');
 
-
---Adicionando formulario
------------------------------------------------------------
-INSERT INTO formulario (id , url,campanha_id)
-values ('1' , 'vacinas.com.br', '1');
 
 
 --Adicionando arquivo_animal
